@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이삭토스트 신메뉴</title>
+    <link rel="shortcut icon" href="./../images/favicon-isaac.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../css/reset.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <style>
+        .new {
+            position: relative;
+            top: 0;
+            left: 50%;
+            width: 1280px;
+            height: 780px;
+            margin-top: 100px;
+            margin-left: -640px;
+        }
+
+        .new>h2 {
+            position: absolute;
+            left: 50%;
+            top: 110px;
+            margin-left: -120px;
+            color: #d13238;
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        .new>.newarch {
+            position: absolute;
+            left: 50%;
+            top: 220px;
+            width: 530px;
+            height: 442px;
+            margin-left: -566px;
+            background-color: #eeebe2;
+            border-radius: 265px 265px 0 0;
+        }
+
+        .new>.newarch>.newtoast {
+            display: block;
+            width: 500px;
+            height: auto;
+            margin: 140px auto 0;
+        }
+
+        .new>.newarch>.newtoast>img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .new>.newarch>.newtoast2 {
+            display: none;
+            position: absolute;
+            left: 60px;
+            top: 40px;
+            width: 400px;
+            height: 400px;
+        }
+
+        .new>.newarch>.newtoast2>img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .new>.textbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 50%;
+            top: 310px;
+            margin-right: -530px;
+        }
+
+        .new>.textbox>h3 {
+            width: 400px;
+            padding: 10px 0;
+            color: #d13238;
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+            border-top: 1px solid #d13238;
+            border-bottom: 1px solid #d13238;
+        }
+
+        .new>.textbox>h3>strong {
+            font-size: 28px;
+        }
+
+        .new>.textbox>.maintext {
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        .new>.textbox>h4 {
+            width: 400px;
+            margin-top: 90px;
+            padding-bottom: 10px;
+            color: #d13238;
+            font-size: 20px;
+            text-align: center;
+            border-bottom: 1px solid #d13238;
+        }
+
+        .new>.textbox>p {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        /* top 버튼 */
+        .top {
+            display: none;
+            position: fixed;
+            right: 50%;
+            bottom: 25px;
+            width: 0;
+            height: 0;
+            margin-right: -48%;
+            border-width: 30px;
+            border-style: solid;
+            border-color: transparent #fbefc4 #fbefc4 transparent;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px #d3d1c9;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .top>p {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: 0;
+            margin-top: -3px;
+            color: #d13238;
+            text-align: center;
+        }
+    </style>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/jquery.easing.min.js"></script>
+    <script src="./../js/function.js"></script>
+    <script>
+        $(function () {
+            $('.newtoast').on('mouseover', function () {
+                $(this).css({ opacity: 0 }).next('.newtoast2').show();
+            });
+            $('.newtoast').on('mouseout', function () {
+                $(this).css({ opacity: 1 }).next('.newtoast2').hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="bg_lnb">
+                <a href="#">이삭 NEW 토스트</a>
+            </div>
+            <div class="container">
+                <h1 class="logo"><a href="./../index.html">이삭토스트 로고</a></h1>
+                <ul class="sns">
+                    <li><a href="https://www.facebook.com/isaactoast.online" target="blank">facebook</a></li>
+                    <li><a href="https://www.instagram.com/isaactoast.online/" target="blank">instagram</a></li>
+                    <li><a href="https://blog.naver.com/isaac-toast" target="blank">blog</a></li>
+                </ul>
+                <nav>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">브랜드</a>
+                            <ol class="lnb">
+                                <li><a href="#">브랜드소개</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">CEO인사말</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">메뉴</a>
+                            <ol class="lnb">
+                                <li><a href="#">토스트</a></li>
+                                <li><a href="#">커피 & 티</a></li>
+                                <li><a href="#">과일주스 & 음료</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">이삭스토어</a>
+                            <ol class="lnb">
+                                <li><a href="#">이삭스토어</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">창업정보</a>
+                            <ol class="lnb">
+                                <li><a href="#">창업안내</a></li>
+                                <li><a href="#">교육 프로그램</a></li>
+                                <li><a href="#">인테리어</a></li>
+                                <li><a href="#">가맹문의</a></li>
+                                <li><a href="#">신규개설추천상권</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">이삭소식</a>
+                            <ol class="lnb">
+                                <li><a href="#">뉴스 · 공지</a></li>
+                                <li><a href="#">프로모션</a></li>
+                                <li><a href="#">이삭 SNS</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <hr />
+        <section class="new">
+            <h2>NEW TOAST</h2>
+
+            <div class="newarch">
+                <a href="#" class="newtoast">
+                    <img src="./../images/isaac_richamtoast.png" alt="이삭 더블치즈 리챔 토스트 DP">
+                </a>
+                <a href="#" class="newtoast2">
+                    <img src="./../images/1-double_cheese_richam.png" alt="이삭 더블치즈 리챔 토스트">
+                </a>
+            </div>
+
+            <div class="textbox">
+                <h3>
+                    <strong>더블치즈 리챔</strong> <br />
+                    Double Cheese Richam
+                </h3>
+                <p class="maintext">
+                    핫치폴레 리챔과 딥치즈 소스의 만남! <br />
+
+                    리챔과 두번째 콜라보 메뉴
+                </p>
+                <h4>속재료</h4>
+                <p>
+                    계란, 콘, 모짜렐라 치즈, 리챔
+                </p>
+            </div>
+        </section>
+        <hr />
+        <footer>
+            <h2 class="footer_logo">
+                <a href="#">이삭토스트 푸터 로고</a>
+            </h2>
+            <ul class="in_link">
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">제휴/제안</a></li>
+                <li><a href="#">고객의 소리</a></li>
+            </ul>
+            <ul class="in_link right">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+            <address>&copy; ISAAC TOAST</address>
+            <span class="frame">
+                <img src="./../images/jeeeun_logo.png" alt="#">
+            </span>
+            <p>
+                Designed by JEEEUN <br />
+                mobile. 010.5026.5708 <br />
+                email. y75795582@gmail.com
+            </p>
+        </footer>
+        <hr />
+        <div class="top">
+            <p>
+                ▲ <br />
+                TOP
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
